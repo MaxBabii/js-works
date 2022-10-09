@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button type="submit" id="submit">№1</button>
+
+        <button type="submit" id="menu">№2</button>
+    </div>
+    <script>
+        let myTab;
+        document.querySelector('#submit').onclick = function(){
+            myTab=window.open("https://lpnu.ua/", "_blank", "height=300,width=500");
+        }
+        document.querySelector('#menu').onclick = function(){
+            if(myTab) myTab.close(); 
+        }
+    </script>
+</body>
+</html>

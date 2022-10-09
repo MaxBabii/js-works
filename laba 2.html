@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input id="Number"> <br>
+        <button type="button" onclick="myFunction()">Викликати функцію</button> <br>
+        <p id="demo"></p>
+    <script>
+    function myFunction() {
+    var arr = [];
+    var ch = '';
+    var x_to_increment = 'x';
+    var x = document.getElementById("Number").value;
+    arr.push(ch);
+    for(var i = 0; i < x; i++){
+        arr+=x_to_increment+" ";  
+        x_to_increment += "x"; 
+    }
+    document.getElementById("demo").innerHTML = arr;
+    
+}</script>
+</body>
+</html>

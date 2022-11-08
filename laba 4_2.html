@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2</title>
+</head>
+<body>
+    <button type="button" onclick="myFunction()">Викликати функцію</button> <br>
+    <script>
+        function myFunction(){
+        var today=new Date();
+        var cmas=new Date(today.getFullYear(), 7, 1);
+        if (today.getMonth() && today.getDate()) 
+        {
+        cmas.setFullYear(cmas.getFullYear()+1); 
+        }  
+        var one_day=1000*60*60*24;
+        alert(Math.ceil((cmas.getTime()-today.getTime())/(one_day))+
+        " днів до канікул!");
+        if(today.getMonth() == 7 || today.getMonth() == 8) 
+        {
+        alert ("Канікули!");
+        }
+    }
+    </script>
+</body>
+</html>

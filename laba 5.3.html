@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.3</title>
+</head>
+<body>
+    <input id="Number"> <br>
+    <button type="button" onclick="myFunction()">Викликати функцію</button> <br>
+    <p id="demo"></p>
+    <script>
+        function myFunction()
+        {
+            var str = document.getElementById("Number").value;
+            var Regex = new RegExp("0X[A-F]{1,}");
+            var b = Regex.test(str);
+            if(b) document.getElementById("demo").innerHTML = str;
+
+        }
+    </script>
+</body>
+</html>

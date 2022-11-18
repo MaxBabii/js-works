@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.1</title>
+</head>
+<body>
+    <input id="Number"> <br>
+    <button type="button" onclick="myFunction()">Викликати функцію</button> <br>
+    <p id="demo"></p>
+    <script>
+        function myFunction(){
+            var str = document.getElementById("Number").value;
+            var regex = new RegExp("[1-9A-Za-z]{1,}\@gmail\.[a-z]{1,}");
+            var result = regex.test(str);
+            if(result == true) document.getElementById("demo").innerHTML = "Введено правильну адресу";
+            else document.getElementById("demo").innerHTML = "Введена адреса містить помилки";
+        }
+    </script>
+</body>
+</html>

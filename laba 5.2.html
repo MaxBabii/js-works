@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2</title>
+</head>
+<body>
+    <input id="Number"> <br>
+    <button type="button" onclick="myFunction()">Викликати функцію</button> <br>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var text = document.getElementById('Number').value;
+            var regex = /a\d{1,}a/gi;
+            var result = text.match(regex);
+            for (var i = 0; i <= result.length -1; i++) {
+                document.write(result[i] + "<br>")
+            }
+        }
+    </script>
+</body>
+</html>
